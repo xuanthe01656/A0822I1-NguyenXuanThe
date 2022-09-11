@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>survey</title>
+    <style>
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+            background-color:#fff;
+        }
+        td{
+            text-align: center; width: 95px; height: 25px;
+        }
+        th{
+            height: 25px; width: 330px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maket Reseach Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <p><b>What is your age range?</b></p>
+    <select name="age" style="width: 400px">
+        <option value="age">18-24</option>
+        <option value="age">25-34</option>
+        <option value="age">35-50</option>
+        <option value="age">50+</option>
+    </select>
+    <p><b>What is your yearly income range?</b></p>
+    <select name="range" style="width: 400px">
+        <option value="range">$0-$25,000</option>
+        <option value="range">$25,001-$50,000</option>
+        <option value="range">$50,001-$100,000</option>
+        <option value="range">$100,000+</option>
+    </select>
+    <p><b>Gender indentity</b></p>
+    <label><input name="gender" value="male" type="radio"/>Male</label><br>
+    <label><input name="gender" value="male" type="radio"/>Female</label><br>
+    <label><input name="gender" value="male" type="radio"/>Nonbinary</label><br>
+    <label><input name="gender" value="male" type="radio"/>Orther<br>
+        <input id="Field505_other" name="textorther" type="text" value maxlength="250"></label>
+    <label id="Field505_otherlabel" class="other" for="Field505_other" style="display: block;">
+        Maximum of <var id="rangeMaxMsg505">250</var> characters.&nbsp;&nbsp;&nbsp; <em class="currently" style="display: inline;">Currently Used: <var id="rangeUsedMsg505">0</var> characters.</em>
+    </label>
+    <p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></p>
+    <label><input name="product" value="produc1" type="checkbox">Produc 1</label><br>
+    <label><input name="product" value="produc2" type="checkbox">Produc 2</label><br>
+    <label><input name="product" value="produc3" type="checkbox">Produc 3</label>
+    <p><b>How often would you use our new product?</b></p>
+    <label><input name="frequency" value="daily" type="radio"/>Daily</label><br>
+    <label><input name="frequency" value="weekly" type="radio"/>Weekly</label><br>
+    <label><input name="frequency" value="monthly" type="radio"/>Monthly</label>
+    <p><b>What would you pay for the new product?</b></p>
+    <span class="symbol">$</span>
+    <span>
+        <input id="Field807" name="Field807" type="text" value="" size="10" />
+        <label for="Field807">Dollars </label>
+    </span>
+    <span>.</span>
+    <span>
+		<input id="Field807-1" name="Field807-1" type="text" value="" size="2" maxlength="2"/>
+		<label for="Field807-1">Cents</label>
+	</span>
+    <p><b>What features would you like to see in the new product.</b></p>
+    <input type="text" name="features" value style="width: 710px; height: 100px">
+    <p><b>Please rate your level of agreement with the following statements.</b></p>
+    <table border="1" style="border-collapse: collapse; border-color: beige">
+        <tr>
+            <td></td>
+            <td>Strongly Disagree</td>
+            <td>Disagree</td>
+            <td>Agree</td>
+            <td>Strongly Agree</td>
+        </tr>
+        <tr>
+            <th>Out products are priced fairly</th>
+            <td><input type="radio" name="radio" value><br>1</td>
+            <td><input type="radio" name="radio" value><br>2</td>
+            <td><input type="radio" name="radio" value><br>3</td>
+            <td><input type="radio" name="radio" value><br>4</td>
+        </tr>
+        <tr>
+            <th>Our products are high quality</th>
+            <td><input type="radio" name="radio" value><br>1</td>
+            <td><input type="radio" name="radio" value><br>2</td>
+            <td><input type="radio" name="radio" value><br>3</td>
+            <td><input type="radio" name="radio" value><br>4</td>
+        </tr>
+        <tr>
+            <th>You would recomment our product to a frend or coworker</th>
+            <td><input type="radio" name="radio" value><br>1</td>
+            <td><input type="radio" name="radio" value><br>2</td>
+            <td><input type="radio" name="radio" value><br>3</td>
+            <td><input type="radio" name="radio" value><br>4</td>
+        </tr>
+    </table><br>
+    <input type="button" value="Submit" style="border: outset; height: 25px; width: 75px"/>
+</form>
+</body>
+</html>

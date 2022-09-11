@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style type="text/css">
+        #a{
+            background-color: white;
+            border:1px solid white;
+            width:500px;
+            height:400px;
+            position:relative;
+        }
+        #b{
+            position:absolute;
+            top:175px;
+            bottom:0px;
+            left:85px;
+            right:50px
+        }
+        #c {
+            position:absolute;
+            top:250px;
+            bottom:10px;
+            left:80px;
+            right:20px
+        }
+        #d{
+            background-color: khaki;
+            border:1px solid white;
+            width:500px;
+            height:400px;
+            position:relative;
+        }
+        #e
+        {
+            height:75px;
+        }
+        tr, th, th{text-align: left
+        }
+    </style>
+</head>
+<body style="background-color: aquamarine">
+<div id="a">
+    <form method="post">
+        <h1 style="text-align: center; background-color: orangered; color: white">SỞ THÍCH CỦA BẠN</h1>
+        <label style="color: blue" ><b>Họ và tên</b> &nbsp;<input style="border: inset" type="text" name="yourname" size="25"></label><br><br>
+        <label style="color: blue" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Email</b> &nbsp;<input style="border: inset" type="text" name="email" size="25"></label><br><br>
+        <b style="color: blue" >&nbsp;&nbsp;&nbsp;Sở thích</b>
+        <table id="b">
+            <tr>
+                <td><label style="color: orangered"><input name="hobby" value="sport"  type="checkbox"/>Thể thao</label></td>
+                <td><label style="color: orangered"><input name="hobby" value="Music"  type="checkbox"/>Âm nhạc</label></td>
+                <td><label style="color: orangered"><input name="hobby" value="readbook"  type="checkbox"/>Đọc sách</label></td>
+            </tr>
+            <tr>
+                <td><label style="color: orangered"><input name="hobby" value="surthefweb" type="checkbox"/>Lướt web</label></td>
+                <td><label style="color: orangered"><input name="hobby" value="playgame"  type="checkbox"/>Chơi game</label></td>
+                <td><label style="color: orangered"><input name="hobby" value="film"  type="checkbox"/>Điện ảnh</label></td>
+            </tr>
+            <tr>
+                <td><label style="color: orangered"><input name="hobby" value="travel" type="checkbox" style="border: inset"/>Du lịch</label></td>
+            </tr>
+        </table>
+        <label id="c">
+            <button type="button" value="button" style="border: outset">Gửi thông tin</button>
+            <button type="reset" value="Reset" style="border: outset">Nhập lại</button>
+        </label>
+    </form>
+</div>
+<div id="d">
+    <form method="post">
+        <h1 style="text-align: left; background-color: deepskyblue; color: blue">ĐĂNG KÝ HỌC VIÊN</h1>
+        <table>
+            <tr>
+                <th><label style="color: blue; text-align: center" >Họ và tên</label></th>
+                <th><input style="border: inset" type="text" name="yourname" size="25"></th>
+            </tr>
+            <tr>
+                <th><label style="color: blue; text-align: center" >Ngày sinh</label></th>
+                <th><input style="border: inset" type="text" name="day of birth" size="25"></th>
+            </tr>
+            <tr>
+                <th><label style="color: blue" >Giới tính</label></th>
+                <td><label> <input name="gender" value="male" type="radio"/>Nam</label><label><input name="gender" value="female" type="radio"/>Nữ </label></td>
+            </tr>
+            <tr>
+                <th><label style="color: blue; text-align: left" >Địa chỉ</label></th>
+                <th><input id="e" style="border: inset" type="text" name="address"></th>
+            </tr>
+            <tr>
+                <th><label style="color: blue; text-align: left" >Lớp</label></th>
+                <th>
+                    <select name="class" style="border: inset">
+                        <option value="class">-Lớp</option>
+                        <option value="a08">A08</option>
+                        <option value="a07">A07</option>
+                        <option value="a06">A06</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th><label style="color: blue; text-align: left">Email</label></th>
+                <th><input style="border: inset" type="text" name="email" size="25"></th>
+            </tr>
+            <tr>
+                <th><label style="color: blue; text-align: left">Số điện thoại</label></th>
+                <th><input style="border: inset" type="text" name="phone" size="25"></th>
+            </tr>
+            <tr>
+                <th>&nbsp</th>
+                <th>
+                    <button type="button" value="button" style="border: outset">Đăng ký</button>
+                    <button type="reset" value="Reset" style="border: outset">Nhập lại</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
