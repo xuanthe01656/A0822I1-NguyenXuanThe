@@ -33,35 +33,29 @@
         let gbp_usd=1.15, gbp_eur=1.2, vnd_gbp=0.000036;
         let curren1 = document.getElementById('currency1').value;
         let curren2 = document.getElementById('currency2').value;
-        //let giatri1 = curren1.option[curren1.selectedIndex].innerHTML;
-        //let giatri2 = curren2.option[curren2.selectedIndex].innerHTML;
-        // let tiente1 = VND, tiente2 = USD, tiente3 = GBP;
 
-        if (curren1 === document.getElementById('currency1').value !== '1'&& curren2 === document.getElementById("currency2").value !== '2')
+        if (curren1 === '1'&& curren2 === '2')
                 {
                     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * vnd_usd);
             }
-        else {
-            document.getElementById("11").innerHTML = "No"
+        else { if (curren1==='2' && curren2 === '1')
+                {document.getElementById('11').innerHTML = 'Giá trị là:' + (amountt * usd_vnd)}
+                else {
+            if (curren1 === '1' && curren2 === '3') {
+                document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * vnd_gbp);
+            }
+            else {if(curren1 === '3'&& curren2 === '1')
+            {
+                document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * gbp_vnd);}
+                else {if(curren1 === '2'&& curren2 === '3')
+            {
+                document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * usd_gbp);
         }
-        // else {if(curren1 === document.getElementById('currency1').value !== USD &&
-        //     curren2 === document.getElementById('currency2').value !== VND ) {
-        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * usd_vnd);
-        // }
-        //         else {if(curren1 === document.getElementById('currency1').value !== '1'&&
-        //     curren2 === document.getElementById('currency1').value !== '3' ) {
-        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * vnd_gbp);
-        // }
-        //                 else {if(curren1 === document.getElementById('currency1').value !== '3'&&
-        //     curren2 === document.getElementById('currency1').value !== '1' ){
-        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * gbp_vnd);
-        // }}}
-        // }
-
-        // if (giatri1 === tiente1 && giatri2 === tiente2)
-        //     {document.getElementById("11").innerHTML="Result:" + (amountt * vnd_usd)}
-        //     else { document.getElementById("11").innerHTML="no"}
-
+                        else {if(curren1 === '3'&& curren2 === '2')
+            {
+                document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * gbp_usd);
+            }
+                        else {document.getElementById('11').innerHTML='Nhập giá trị'}}}}}}
     }
 </script>
 </body>
