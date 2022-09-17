@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculator</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<input id="value1" placeholder="Nhập số thứ nhất">
+<input id="value2" placeholder="Nhập số thứ hai"><br><br>
+<button onclick="addition()">Addition(+)</button>
+<button onclick="subtraction()">Subtraction(-)</button>
+<button onclick="multiplication()">Multiplication(x)</button>
+<button onclick="division()">Division(/)</button>
+<h2 id="giatri"></h2>
+<script>
+    function addition() {
+    let giatri1 = +document.getElementById("value1").value;
+    let giatri2 = +document.getElementById("value2").value;
+    let cong = giatri1 + giatri2;
+    document.getElementById("giatri").innerHTML = "Kết quả: "+ cong;
+}
+    function subtraction() {
+        let giatri1 = +document.getElementById("value1").value;
+        let giatri2 = +document.getElementById("value2").value;
+        let tru = giatri1 - giatri2;
+
+        document.getElementById("giatri").innerHTML = "Kết quả: "+ tru;
+    }
+    function multiplication() {
+        let giatri1 = +document.getElementById("value1").value;
+        let giatri2 = +document.getElementById("value2").value;
+        let nhan = giatri1 * giatri2;
+
+        document.getElementById("giatri").innerHTML = "Kết quả: "+ nhan;
+    }
+    function division() {
+        let giatri1 = +document.getElementById("value1").value;
+        let giatri2 = +document.getElementById("value2").value;
+        let chia = giatri1 / giatri2;
+
+        document.getElementById("giatri").innerHTML = "Kết quả: "+ chia;
+    }
+
+
+
+</script>
+</body>
+</html>

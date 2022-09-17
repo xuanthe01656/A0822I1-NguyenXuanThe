@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>convert</title>
+</head>
+<body>
+<b>Amount</b>
+<input id="giatri" placeholder="Amount">
+<b>From Currency</b>
+<select id="currency1" style="width: 60px">
+    <option value="1">VND</option>
+    <option value="2">USD</option>
+    <option value="3">GBP</option>
+</select>
+<b>To Currency</b>
+<select id="currency2" style="width: 60px">
+    <option value="1">VND</option>
+    <option value="2">USD</option>
+    <option value="3">GBP</option>
+</select><br>
+<button onclick="ketqua()">Convert</button>
+<b id="11"></b>
+<form>
+
+</form>
+<script>
+    function ketqua() {
+        let amountt = +document.getElementById("giatri").value;
+        let usd_vnd=23.648, eur_vnd=23.666, gbp_vnd=27.217;
+        let usd_eur=1.0003, usd_gbp=0.87, vnd_usd=0.000042;
+        let eur_usd= 0.9994, eur_gbp=0.9, vnd_eur=0.00004223;
+        let gbp_usd=1.15, gbp_eur=1.2, vnd_gbp=0.000036;
+        let curren1 = document.getElementById('currency1').value;
+        let curren2 = document.getElementById('currency2').value;
+        //let giatri1 = curren1.option[curren1.selectedIndex].innerHTML;
+        //let giatri2 = curren2.option[curren2.selectedIndex].innerHTML;
+        // let tiente1 = VND, tiente2 = USD, tiente3 = GBP;
+
+        if (curren1 === document.getElementById('currency1').value !== '1'&& curren2 === document.getElementById("currency2").value !== '2')
+                {
+                    document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * vnd_usd);
+            }
+        else {
+            document.getElementById("11").innerHTML = "No"
+        }
+        // else {if(curren1 === document.getElementById('currency1').value !== USD &&
+        //     curren2 === document.getElementById('currency2').value !== VND ) {
+        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * usd_vnd);
+        // }
+        //         else {if(curren1 === document.getElementById('currency1').value !== '1'&&
+        //     curren2 === document.getElementById('currency1').value !== '3' ) {
+        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * vnd_gbp);
+        // }
+        //                 else {if(curren1 === document.getElementById('currency1').value !== '3'&&
+        //     curren2 === document.getElementById('currency1').value !== '1' ){
+        //     document.getElementById('11').innerHTML = "Giá trị là:" + (amountt * gbp_vnd);
+        // }}}
+        // }
+
+        // if (giatri1 === tiente1 && giatri2 === tiente2)
+        //     {document.getElementById("11").innerHTML="Result:" + (amountt * vnd_usd)}
+        //     else { document.getElementById("11").innerHTML="no"}
+
+    }
+</script>
+</body>
+</html>

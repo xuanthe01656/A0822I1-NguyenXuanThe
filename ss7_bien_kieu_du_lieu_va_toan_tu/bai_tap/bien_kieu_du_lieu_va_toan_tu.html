@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài tập 1</h1>
+<script>
+    let diemtoan= + prompt('Nhập điểm toán');
+    let diemly = + prompt('Nhập điểm lý');
+    let diemhoa= parseInt(prompt('Nhập điểm hóa'));
+    let tongdiem= diemhoa+diemly+diemtoan;
+    let diemtrungbinh=tongdiem/3;
+
+    document.write("Tổng điểm là:"+tongdiem);
+    document.write('<br/>');
+    document.write('Điểm trung bình là:'+diemtrungbinh);
+
+</script>
+<h1>Bài tập 2</h1>
+<b id="dof">Độ F là:</b>
+<script>
+    let doC;
+    doC=prompt("Nhập độ C");
+    let C=parseInt(doC);
+    let F=1.8*C+34
+    document.getElementById("dof").innerHTML="Độ F là:"+F + "°F";
+</script>
+<h1>Bài tập 3 và 4</h1>
+<b>Nhập số liệu</b>
+<input id="bankinh" placeholder="Nhập bán kính" >
+<input id="sopi" placeholder="Nhập số Pi">
+<button onclick="ketqua3()">Kết Quả</button>
+<p id="ketqua">Chu vi hình tròn ??</p>
+<p id="ketqua1">Diện tích hình tròn ??</p>
+<script>
+    function ketqua3(){
+        let R = document.getElementById("bankinh").value;
+        let Pi = document.getElementById("sopi").value;
+        let C = 2 * R * Pi ;
+        let S = Pi * R * R ;
+
+        document.getElementById("ketqua").innerHTML = "Chu vi hình tròn là:"+C+"cm";
+        document.getElementById("ketqua1").innerHTML = "Diện tích hình tròn là:"+S+"cm<sup>2</sup>";
+    }
+</script>
+</body>
+</html>
