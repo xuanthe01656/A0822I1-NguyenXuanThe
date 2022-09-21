@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        table{ padding: 10px;
+            width: 200px;
+            height: 200px;
+        }
+        th {
+            width: 50px;
+            height: 50px;
+        }
+        button{
+            color: blue;
+            width: 30px;
+            height: 30px;
+        }
+        input{
+            color: blue;
+            text-align: right;
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body >
+<div style="width: 200px; height: 300px; border: inset">
+    <table>
+        <tr>
+            <th colspan="4"><input id="giatri" name="number"></th>
+        </tr>
+        <tr>
+            <th><button type="button" onclick="click1('1')" value="1">1</button></th>
+            <th><button type="button" onclick="click1('2')" value="2">2</button></th>
+            <th><button type="button" onclick="click1('3')" value="3">3</button></th>
+            <th><button type="button" onclick="click1('+')" value="+">+</button></th>
+        </tr>
+        <tr>
+            <th><button type="button" onclick="click1('4')" value="4">4</button></th>
+            <th><button type="button" onclick="click1('5')" value="5">5</button></th>
+            <th><button type="button" onclick="click1('6')" value="6">6</button></th>
+            <th><button type="button" onclick="click1('-')" value="-">-</button></th>
+        </tr>
+        <tr>
+            <th><button type="button" onclick="click1('7')" value="7">7</button></th>
+            <th><button type="button" onclick="click1('8')" value="8">8</button></th>
+            <th><button type="button" onclick="click1('9')" value="9">9</button></th>
+            <th><button type="button" onclick="click1('*')" value="*">*</button></th>
+        </tr>
+        <tr>
+            <th><button type="button" onclick="click2()" value="C">C</button></th>
+            <th><button type="button" onclick="click1('0')" value="0">0</button></th>
+            <th><button type="button" onclick="click3()" value="=">=</button></th>
+            <th><button type="button" onclick="click1('/')" value="/">/</button></th>
+        </tr>
+    </table>
+    <script>
+        function click1(value) {
+             document.getElementById("giatri").value += value ;
+        }
+        function click2() {
+            document.getElementById('giatri').value = "";
+
+        }
+        function click3() {
+            let tinh = document.getElementById('giatri').value;
+            let tinh1 = eval(tinh);
+            document.getElementById('giatri').value = tinh1;
+
+        }
+
+    </script>
+</div>
+</body>
+</html>

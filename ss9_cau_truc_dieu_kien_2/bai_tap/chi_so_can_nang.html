@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<script>
+    let weight = +prompt("nhập cân nặng"), height = +prompt("Nhập chiều cao");
+    let BMI = weight / (height ^ 2);
+
+    if (BMI < 18.5) {
+        alert("Underweight")
+    } else {
+        if ( BMI < 25) {
+            alert("Normal")
+        } else {
+            if ( BMI < 30) {
+                alert("Overweight")
+            } else {
+                alert("Obese")
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Do you love me?</h1>
+<button onclick="clickme()">Yes</button>
+<button id="clickNo" onmouseover="jump()" style="position: absolute; left: 230px">No</button>
+<script>
+    function clickme() {
+        alert("<3")
+
+    }
+    function jump() {
+        let x = Math.random()*window.innerWidth;
+        let y = Math.random()*window.innerHeight;
+        document.getElementById("clickNo").style.left= x + "px";
+        document.getElementById("clickNo").style.top = y + "px";
+
+    }
+</script>
+</body>
+</html>
