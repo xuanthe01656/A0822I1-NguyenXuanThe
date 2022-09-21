@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 5</h1>
+<h2>Diện tích hình tam giác vuông</h2>
+<input id="canhA" type="text" value="" placeholder="Nhập vào cạnh thứ nhất">
+<input id="canhB" type="text" value="" placeholder="Nhập vào cạnh thứ hai">
+<button type="button" onclick="myClickk4()">Kết quả</button><br><br>
+<b id="ketQua5">Kết quả:</b>
+<script>
+    function myClickk4(){
+    let canhA1 = +document.getElementById("canhA").value;
+    let canhB1 = +document.getElementById("canhB").value;
+    let S1 = 0.5*(canhA1*canhB1);
+    document.getElementById("ketQua5").innerHTML = "Kết Quả: " + S1 +" Cm<sup>2</sup>";
+    }
+</script>
+</body>
+</html>

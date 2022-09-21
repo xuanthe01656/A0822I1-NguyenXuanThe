@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài tập 7</h1>
+<h2>Giải phương trình bậc 2</h2>
+<h3>Nhập tham số vào phương trình bậc 2 ax<sup>2</sup>+bx+c=0 (a≠0):</h3>
+<input id="thamSoA" type="text" value="" placeholder="Nhập vào a">
+<input id="thamSoB" type="text" value="" placeholder="Nhập vào b">
+<input id="thamSoC" type="text" value="" placeholder="Nhập vào c"><br><br>
+<button type="button" onclick="ketQuaa1()">Kết quả</button>
+<br><br>
+<b id="print"></b>
+<script>
+    function ketQuaa1() {
+        let a = +document.getElementById("thamSoA").value;
+        let b = +document.getElementById("thamSoB").value;
+        let c = +document.getElementById("thamSoC").value;
+        let delta = (b*b)-(4*a*c);
+        let canbac = Math.sqrt(delta);
+
+
+        if (delta < 0) {
+            document.getElementById("print").innerHTML = "Phương trình vô nghiệm.";
+        } else {
+            if (delta === 0) {
+                document.getElementById("print").innerHTML = "Phương trình có nghiệm kép x<sub>1</sub>=x<sub>2</sub> = " + (-b / (2 * a));
+            } else {if(delta>0)
+                document.getElementById("print").innerHTML = "Phương trình có 2 nghiệm x<sub>1</sub> = " + ((-b + canbac) / (2 * a)) + " và  x<sub>2</sub> = " + ((-b - canbac) / (2 * a));
+            }
+        }
+    }
+</script>
+</body>
+</html>

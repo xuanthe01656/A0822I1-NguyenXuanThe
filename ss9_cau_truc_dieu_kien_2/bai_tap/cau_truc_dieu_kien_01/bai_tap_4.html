@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 4</h2>
+<b id="ketqua3">Kết quả:</b>
+<script>
+    let number1 = +prompt("Nhập vào số thứ nhất:"), number2=+prompt("Nhập vào số thứ 2"), number3 = +prompt("nhập vào số thứ 3");
+    if(number1>number2 && number1>number3){
+        document.getElementById("ketqua3").innerHTML = "Kết quả: "+number1 +" là số lớn nhất";
+    } else{
+        if(number2>number3){
+            document.getElementById("ketqua3").innerHTML = "Kết quả: "+number2 +" là số lớn nhất";
+        } else {
+            document.getElementById("ketqua3").innerHTML = "Kết quả: "+number3 +" là số lớn nhất";
+        }
+    }
+</script>
+</body>
+</html>

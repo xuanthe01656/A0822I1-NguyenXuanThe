@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 4</h1>
+<h2>Diện tích hình chữ nhật</h2>
+<input id="canh1" type="text" value=""placeholder="Nhập cạnh thứ nhất">
+<input id="canh2" type="text" value=""placeholder="Nhập cạnh thứ hai">
+<button type="button" onclick="myClickk3()">Kết quả</button><br><br>
+<b id="ketQua2">Kết Quả: </b>
+<script>
+    function myClickk3() {
+        let canh1 = +document.getElementById("canh1").value;
+        let canh2 = +document.getElementById("canh2").value;
+        let S = canh1*canh2;
+        document.getElementById("ketQua2").innerHTML = "Kết Quả: " + S + " Cm<sup>2</sup>"
+    }
+</script>
+</body>
+</html>

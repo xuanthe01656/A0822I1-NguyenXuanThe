@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 5</h2>
+<b id="ketqua4">Kết quả:</b>
+<script>
+    let avgDiemKiemTra = +prompt("Nhập điểm trung bình của các bài kiểm tra: ");
+    let diemGiuaKy = +prompt("Nhập điểm giửa kỳ:");
+    let diemThiCuoiKy = +prompt("Nhập điểm thi cuối kỳ");
+    let tongAvg = (avgDiemKiemTra+diemGiuaKy+diemThiCuoiKy*2)/4;
+    if (tongAvg>=8){
+        document.getElementById("ketqua4").innerHTML = "Kết quả: Học lực giỏi.";
+    } else {
+        if(tongAvg>=6.5){
+            document.getElementById("ketqua4").innerHTML = "Kết quả: Học lực khá.";
+        }else {
+            if(tongAvg>=5){
+                document.getElementById("ketqua4").innerHTML = "Kết quả: Học lực trung bình.";
+            }else {
+                document.getElementById("ketqua4").innerHTML = "Kết quả: Học lực yếu."
+            }
+        }
+    }
+</script>
+</body>
+</html>

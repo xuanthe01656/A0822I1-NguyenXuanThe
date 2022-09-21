@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 1</h1>
+<h2>Tính độ F</h2>
+<input id="nhapC" type="text" value="" placeholder="Nhập độ C">
+<button type="button" onclick="myClickk()">Kết quả</button><br><br>
+<b id="doF">Kết Quả: </b>
+<script>
+    function myClickk() {
+        let doC=+document.getElementById("nhapC").value;
+        let doF=doC*1.8+32;
+        document.getElementById("doF").innerHTML = "Kết Quả: " + doF + " °F";
+    }
+</script>
+</body>
+</html>

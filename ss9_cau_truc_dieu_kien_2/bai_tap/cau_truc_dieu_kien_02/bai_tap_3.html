@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 3</h1>
+<h2>Diện tích hình vuông</h2>
+<input id="kichthuoc" type="text" value="" placeholder="Nhập kích thước">
+<button type="button" onclick="myClickk2()">Kết quả</button><br><br>
+<b id="ketQua1">Kết Quả: </b>
+<script>
+    function myClickk2() {
+        let canhA=+document.getElementById("kichthuoc").value;
+        let S=canhA*canhA;
+        document.getElementById("ketQua1").innerHTML = "Kết Quả: " + S + " Cm<sup>2</sup>";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Bài 3</h2>
+<b id="ketqua2">Kết quả:</b>
+<script>
+    let number = +prompt("Nhập vào một số bất kỳ");
+    if (number>0){
+        document.getElementById("ketqua2").innerHTML = "Kết quả: Số đó lớn hơn 0."
+    }else {
+        if(number<0){
+            document.getElementById("ketqua2").innerHTML = "Kết quả: Số đó nhỏ hơn 0."
+        } else {
+            document.getElementById("ketqua2").innerHTML = "Kết quả: Số đó là số 0."
+        }
+    }
+</script>
+</body>
+</html>

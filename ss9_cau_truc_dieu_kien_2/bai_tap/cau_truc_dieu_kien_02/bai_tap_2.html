@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 2</h1>
+<h2>Chuyển đổi đơn vị</h2>
+<input id="nhapM" type="text" value="" placeholder="Nhập số met">
+<button type="button" onclick="myClickk1()">Kết quả</button><br><br>
+<b id="ketQua">Kết Quả: </b>
+<script>
+    function myClickk1() {
+        let m=+document.getElementById("nhapM").value;
+        let feet=m*3.2808;
+        document.getElementById("ketQua").innerHTML = "Kết Quả: " + feet + " ft";
+    }
+</script>
+</body>
+</html>

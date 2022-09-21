@@ -26,7 +26,7 @@
     </style>
 </head>
 <body >
-<div style="width: 200px; height: 300px; border: inset">
+<div style="width: 200px; height: 350px; border: inset">
     <table>
         <tr>
             <th colspan="4"><input id="giatri" name="number"></th>
@@ -55,6 +55,9 @@
             <th><button type="button" onclick="click3()" value="=">=</button></th>
             <th><button type="button" onclick="click1('/')" value="/">/</button></th>
         </tr>
+        <tr>
+            <th colspan="4"><button type="button" onclick="click4()" value="x">x</button></th>
+        </tr>
     </table>
     <script>
         function click1(value) {
@@ -69,6 +72,12 @@
             let tinh1 = eval(tinh);
             document.getElementById('giatri').value = tinh1;
 
+        }
+        function click4() {
+            let string = document.getElementById("giatri").value;
+            let array = string.split("");
+            array[array.length-1]="";
+            document.getElementById("giatri").value=array.join("");
         }
 
     </script>
