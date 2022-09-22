@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 10</h1>
+<h2>Tính tiền điện</h2>
+<h3>Nhập tổng số điện năng tiêu thụ(Áp dụng cho 1 hộ gia đình):</h3>
+<input id="total" type="text" placeholder="Tổng điện năng tiêu thụ" value="">
+<button type="button" onclick="resultA()">Kết quả</button><br><br>
+<b id="resultB">Result:</b>
+<script>
+    function resultA() {
+        let total = +document.getElementById("total").value;
+        let quantity1 = 1678, quantity2= 1734, quantity3= 2014, quantity4 = 2536, quantity5=2834, quantity6=2927;
+        let step1 = total*quantity1+total*quantity1*0.08;
+        let step2 = 50*quantity1+(total-50)*quantity2+(50*quantity1+(total-50)*quantity2)*0.08;
+        let step3 = 50*quantity1+50*quantity2+(total-100)*quantity3+(50*quantity1+50*quantity2+(total-100)*quantity3)*0.08;
+        let step4=50*quantity1+50*quantity2+100*quantity3+(total-200)*quantity4+(50*quantity1+50*quantity2+100*quantity3+(total-200)*quantity4)*0.08;
+        let stepPlus=50*quantity1+50*quantity2+100*quantity3;
+        let step5=stepPlus+100*quantity4+(total-300)*quantity5+(stepPlus+100*quantity4+(total-300)*quantity5)*0.08;
+        let step6=stepPlus+100*quantity4+100*quantity5+(total-400)*quantity6+(stepPlus+100*quantity4+100*quantity5+(total-400)*quantity6)*0.08;
+        if (total<=50){
+            document.getElementById("resultB").innerHTML = "Result: " + step1 + " VND";
+        } else {
+            if(total<=100){
+                document.getElementById("resultB").innerHTML = "Result: "+ step2 + " VND";
+            } else {
+                if(total<=200){
+                    document.getElementById("resultB").innerHTML ="Result: "+ step3 + " VND";
+                } else {
+                    if(total<=300){
+                        document.getElementById("resultB").innerHTML ="Result: "+ step4 +" VND";
+                    } else {
+                        if(total<=400){
+                            document.getElementById("resultB").innerHTML ="Result: "+ step5 + " VND";
+                        }else {
+                            document.getElementById("resultB").innerHTML ="Result: "+ step6 + " VND";
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

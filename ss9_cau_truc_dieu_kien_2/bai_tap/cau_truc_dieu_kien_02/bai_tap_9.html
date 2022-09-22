@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 9</h1>
+<h2>Kiểm tra các kích thước cạnh nhập vào có phải là cạnh tam giác hay không?</h2>
+<h3>Nhập vào các trường bên dưới.</h3>
+<input id="numA" type="text" placeholder="Number" value="">
+<input id="numB" type="text" placeholder="Nunber" value="">
+<input id="numC" type="text" placeholder="Number" value=""><br><br>
+<button type="button" onclick="checker()">Kiểm tra</button>
+<br><br>
+<b id="display1"></b>
+<script>
+    function checker() {
+        let num1 = +document.getElementById("numA").value;
+        let num2 = +document.getElementById("numB").value;
+        let num3 = +document.getElementById("numC").value;
+        let num12 = num1 + num2;
+        let num13 = num1 + num3;
+        let num23 = num2 + num3;
+
+        if (num1 > 0 && num2 > 0 && num3 > 0 && num12 > num3 && num23 > num1 && num13 > num2) {
+            document.getElementById("display1").innerHTML = num1 + ", " + num2 + ", " + num3 + " Là các cạnh của 1 tam giác."
+
+        } else {
+            if (num1 == "" || num2 == "" || num3 == "") {
+                document.getElementById("display1").innerHTML = "Nhập vào trường còn thiếu."
+            } else {
+                document.getElementById("display1").innerHTML = num1 + ", " + num2 + ", " + num3 + " Không phải là các cạnh của 1 tam giác."
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

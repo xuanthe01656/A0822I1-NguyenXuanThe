@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 8</h1>
+<h2>Kiểm tra có phải số nhập vào là số tuổi của 1 người không?</h2>
+<h3>Nhập vào 1 số:</h3>
+<input id="age" type="text" value=""><br><br>
+<button type="button" onclick="check()">Kiểm tra</button>
+<br><br>
+<b id="answer"></b>
+<script>
+    function check() {
+        let num = +document.getElementById("age").value;
+
+        if (Number.isInteger(num) && 0 < num && num < 120) {
+            document.getElementById("answer").innerHTML = num + " là tuổi của 1 người.";
+        } else {
+            if (num=="") {
+                document.getElementById("answer").innerHTML = "Hãy nhập vào một số"
+            } else {
+                document.getElementById("answer").innerHTML = num + " không phải là tuổi của 1 người.";
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

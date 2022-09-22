@@ -8,23 +8,23 @@
 <h1>Bài tập 6</h1>
 <h2>Giải phương trình bậc 1</h2>
 <h3>Nhập tham số của phương trình ax+b=0:</h3>
-<input id="giaTria" type="text" placeholder="Nhập vào a" value="">
-<input id="giaTrib" type="text" placeholder="Nhập vào b" value=""><br><br>
-<button type="button" onclick="ketquaa()">Kết quả</button><br><br>
-<b id="ketQuaa"></b>
+<input id="giaTriA" type="text" placeholder="Nhập vào a" value="">
+<input id="giaTriB" type="text" placeholder="Nhập vào b" value=""><br><br>
+<button type="button" onclick="ketQua12()">Kết quả</button><br><br>
+<b id="ketQuaA"></b>
 <script>
-    function ketquaa() {
-        let a = +document.getElementById("giaTria").value;
-        let b = +document.getElementById("giaTrib").value;
+    function ketQua12() {
+        let a = +document.getElementById("giaTriA").value;
+        let b = +document.getElementById("giaTriB").value;
         let x = -b/a;
         if (a===0 && b===0){
-            document.getElementById("ketQuaa").innerHTML = "Phương trình có vô số nghiệm.";
+            document.getElementById("ketQuaA").innerHTML = "Phương trình có vô số nghiệm.";
         } else {
             if(a===0 && b!==0){
-                document.getElementById("ketQuaa").innerHTML = "Phương trình vô nghiệm.";
+                document.getElementById("ketQuaA").innerHTML = "Phương trình vô nghiệm.";
 
             }else {
-                document.getElementById("ketQuaa").innerHTML = "Phương trình có nghiệm duy nhất: x= " +x;
+                document.getElementById("ketQuaA").innerHTML = "Phương trình có nghiệm duy nhất: x= " +x;
 
             }
         }

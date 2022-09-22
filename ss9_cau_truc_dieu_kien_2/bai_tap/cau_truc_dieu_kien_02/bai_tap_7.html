@@ -20,7 +20,7 @@
         let b = +document.getElementById("thamSoB").value;
         let c = +document.getElementById("thamSoC").value;
         let delta = (b*b)-(4*a*c);
-        let canbac = Math.sqrt(delta);
+        let canBac = Math.sqrt(delta);
 
 
         if (delta < 0) {
@@ -29,7 +29,7 @@
             if (delta === 0) {
                 document.getElementById("print").innerHTML = "Phương trình có nghiệm kép x<sub>1</sub>=x<sub>2</sub> = " + (-b / (2 * a));
             } else {if(delta>0)
-                document.getElementById("print").innerHTML = "Phương trình có 2 nghiệm x<sub>1</sub> = " + ((-b + canbac) / (2 * a)) + " và  x<sub>2</sub> = " + ((-b - canbac) / (2 * a));
+                document.getElementById("print").innerHTML = "Phương trình có 2 nghiệm x<sub>1</sub> = " + ((-b + canBac) / (2 * a)) + " và  x<sub>2</sub> = " + ((-b - canBac) / (2 * a));
             }
         }
     }
