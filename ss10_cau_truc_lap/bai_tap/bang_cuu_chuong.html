@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+    let table1 = '<table border="1">';
+    for (let i = 1; i < 10; i++) {
+        table1+='<tr>';
+        for (let j = 1; j <=8 ; j++) {
+            table1+='<td style="width: 80px; height: 21px">'+(j+1)+"x"+i+"="+i*(j+1)+'</td>';
+        }
+        table1+=' </tr>';
+        
+    }
+    table1+='</table>';
+    document.write(table1);
+
+</script>
+</body>
+</html>

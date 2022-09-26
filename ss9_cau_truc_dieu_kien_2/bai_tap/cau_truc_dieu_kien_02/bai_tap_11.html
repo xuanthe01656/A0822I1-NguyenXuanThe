@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Bài 11</h1>
+<h2>Tính thuế thu nhập cá nhân.</h2>
+<h3>Công thức</h3>
+<ol>
+    <li>Thu nhập chịu thuế(Tổng thu nhập)</li>
+    <li>Các khoản giảm trừ:</li>
+    <ul>
+        <li>Giảm trừ hoàn cảnh bản thân: 11000000.</li>
+        <li>Giảm trừ cho 1 người phụ thuộc: 4400000.</li>
+        <li>Bảo hiểm và các khoản phải nộp theo quy định: Thu nhập chịu thuế * phần trăm phải đóng(ví dụ: 10% đóng BHXH).</li>
+    </ul>
+    <li>Thu nhập tính thuế = thu nhập chịu thuế-các khoản giảm trừ.</li>
+    <li>Thuế thu nhập phải nộp=Thu nhập tính thuế*Thuế suất</li>
+</ol>
+<h3>Bảng tính</h3>
+<b>Thu nhập tính thuế:</b>
+<input id="inCome" type="text" value=""><br><br>
+<button type="button" onclick="check111()">Kết quả</button><br><br>
+<b id="resultC"></b>
+<script>
+    function check111() {
+        let inCome= +document.getElementById("inCome").value;
+
+        if (inCome>0 && inCome<=5000000){
+            document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.05) + " VND";
+        } else{
+            if(inCome<=10000000){
+                document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.1-250000) + " VND";
+            } else {
+                if(inCome<=18000000){
+                    document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.15-750000) + " VND";
+                } else {
+                    if(inCome<=32000000){
+                        document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.20-1650000) + " VND";
+                    } else {
+                        if(inCome<=52000000){
+                            document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.25-3250000) + " VND";
+                        }else {
+                            if(inCome<=80000000){
+                                document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.30-5850000) + " VND";
+                            }else {
+                                document.getElementById("resultC").innerHTML = "Result: " + (inCome*0.35-9850000) + " VND";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

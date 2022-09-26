@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = +prompt("nhập vào số");
+    let count = 0;
+    let N = 2
+
+    function kiemTraN(N) {
+
+        if (N === 1) {
+            return false;
+        } else if (N === 2) {
+            return true;
+        } else {
+            for (let x = 2; x < N; x++) {
+                if (N % x === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    while (count < numbers) {
+            if (kiemTraN(N) === true) {
+                document.write(N + "<br>")
+            }
+        N++;
+        count++
+        }
+
+</script>
+</body>
+</html>

@@ -29,14 +29,15 @@
     document.write('area='+area)
 </script>
 <h1>Bài tập 3</h1>
+Kết quả:<p id="id1">Kết quả</p>
 <button onclick="giatri()">Ấn</button>
 <script>
     function giatri() {
         let a=prompt('Nhập giá trị của a');
         let c=prompt('Nhập giá trị của c');
         let x = a % c ;
-    if (x === 0) {alert("a là bội của c")} else {alert("a không phải là bội của c")}}
-
+    if (x === 0) {alert("a là bội của c")} else {alert("a không phải là bội của c")}
+    if (x === 0) {document.getElementById("id1").innerHTML="<strong>a là bội của c</strong>"} else {document.getElementById("id1").innerHTML="<strong>a không phải là bội của c</strong>"}}
 </script>
 </body>
 </html>
