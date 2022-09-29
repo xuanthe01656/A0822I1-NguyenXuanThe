@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="stars()">Chơi/Chơi lại</button>
+<b id="ac"></b>
+<script>
+    function stars() {
+        let min = +prompt("Nhập vào 1 số bắt đầu.");
+        let max = +prompt("Nhập vào 1 số kết thúc.");
+        let num = +prompt("Nhập vào 1 số trong khoảng bạn đã đặt");
+        let i = Math.floor(Math.random() * (max - min + 1)) + min;
+        while (num < i) {
+            num = +prompt("Số đã nhập nhỏ hơn số ngẫu nhiên")
+            while (num > i) {
+                num = +prompt("Số đã nhập lớn hơn số ngẫu nhiên")
+            }
+            while (num == i) {
+                alert("Bạn đã nhập đúng");
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
