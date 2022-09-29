@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chieuCao = prompt("nhập vào chiều cao");
+    let chieuRong = prompt("Nhập vào chiều rộng");
+    let oRong = "&nbsp";
+    for (let i = 1; i <= chieuCao; i++) {
+        for (let j = 1; j <= chieuRong; j++) {
+            if (i == 1 || i == chieuCao || j == 1 || j == chieuRong) {
+                document.write("*"+oRong);
+            }else {
+                document.write(oRong+oRong+oRong);
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

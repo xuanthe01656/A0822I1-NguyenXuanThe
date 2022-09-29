@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = +prompt("Nhập số tiền vay");
+    let month = +prompt("Nhập số tháng vay");
+    let rate = +prompt("Nhập lãi suất/Tháng");
+    let monthly_money = (money / month);
+    let monthly_interest = (money * rate) / month;
+    let total = monthly_money + monthly_interest;
+    let first_month = total;
+
+    if ((money == "" && money == 0) || (month == "" && month == 0) || (rate == "" && rate == 0)) {
+        alert("Hãy ấn F5 trên bàn phím và nhập vào số cụ thể ở trường còn thiếu.");
+        document.write("<b style='color: red'>Hãy tải lại trang</b>");
+    } else {
+        document.write("<h3>Lãi suất vay theo số dư nợ gốc.</h3>")
+        document.write("1.Số tiền gốc phải trả ngân hàng hằng tháng là: " + monthly_money + " VND <br>");
+        document.write("2.Số lãi phải trả ngân hàng hằng tháng là: " + monthly_interest + " NVD <br>");
+        document.write("3.Số tiền phải trả hằng tháng là : " + total + " VND <br>");
+    }
+    document.write("<h3>Lãi suất vay theo số dư nợ giảm dần.</h3>")
+    document.write("Tổng tiền phải trả tháng 1 là: " + first_month + " VND " + "<br>");
+    for (let i = 1; i < month; i++) {
+        let next_month = (money - i * monthly_money) * rate / month;
+        document.write("Tổng tiền phải trả tháng " + (i + 1) + "là: " + (next_month + monthly_money) + " VND" + "<br>");
+
+    }
+</script>
+
+</body>
+</html>
