@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dictionary</h1>
+Vietnamese/English: <input id="input" type="text" placeholder="Enter the search word" value="">
+<button type="button" onclick="Search()">Search</button>
+<br><br>
+Vietnamese/English: <input id="result" type="text" placeholder="Result" value="">
+<script>
+    function Search() {
+        let input = document.getElementById("input").value;
+        let vietnamese = ['Xin chào', 'Tạm biệt', 'Chào buổi sáng'];
+        let english = ['Hello', 'Goodbye', 'Good morning'];
+        let result = [];
+        if(input==''){
+            alert("Hãy nhập vào ô cần tìm")
+        }
+        for (let i = 0; i < vietnamese.length; i++) {
+            if (input == vietnamese[i]) {
+                result = english[i];
+                // document.getElementById("result").innerHTML = result;
+                document.getElementById("result").value = result;
+                break;
+            } else {
+                if (input == english[i]) {
+                    result = vietnamese[i];
+                    // document.getElementById("result").innerHTML = result;
+                    document.getElementById("result").value = result;
+                    break;
+                } else {
+                    result = '';
+                    // document.getElementById("result").innerHTML = result + "Not found";
+                    document.getElementById("result").value = result + " Not found ";
+                }
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

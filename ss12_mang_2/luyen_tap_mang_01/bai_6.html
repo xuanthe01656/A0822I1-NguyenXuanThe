@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let interger1 = prompt("Nhập vào 1 số nguyên.");
+    let intArray3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
+    let check = intArray3.some(e => e == interger1);
+    if (check == true) {
+        alert(interger1 + "  is in the array");
+    } else {
+        alert(interger1 + "  is not in the array");
+    }
+    if(interger1=''){
+        alert("Please enter an integer");
+    }
+</script>
+</body>
+</html>

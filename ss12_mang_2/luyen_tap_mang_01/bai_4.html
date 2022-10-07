@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intArray = [10, 5, 6, 8, 11, 16, 4, 3, 4, 1];
+    let reverse1 = intArray.reverse();
+    console.log("Đảo ngược của mảng là " + reverse1);
+    let intArray2 = [10, 5, 6, 8, 11, 16, 4, 3, 4, 1];
+    let first = 0;
+    let finish = intArray2.length - 1;
+    while (first < finish) {
+        let parameter = intArray2[first];
+        intArray2[first] = intArray2[finish];
+        intArray2[finish] = parameter;
+        first++;
+        finish--;
+    }
+    console.log(intArray2);
+
+
+</script>
+</body>
+</html>

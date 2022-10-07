@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // let arr = [
+    //     [1, 2, 1, 24],
+    //     [8, 11, 9, 4],
+    //     [7, 0, 7, 27],
+    //     [7, 4, 28, 14],
+    //     [3, 10, 26, 7]
+    // ];
+    let row = +prompt("nhập số hàng");
+    let col = +prompt("nhập số cột");
+    let arr = new Array(row);
+    for (let i = 0; i <arr.length ; i++) {
+        arr[i]= new Array(col);
+        for (let j = 0; j <arr[i].length ; j++) {
+            arr[i][j]= +prompt("nhập vào phần tử hàng : "+i + " cột :" +j);
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        document.write("row "+i);
+        document.write('<br>')
+        for (let j = 0; j < arr[i].length; j++) {
+            document.write(""+arr[i][j]);
+            document.write('<br>')
+        }
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>

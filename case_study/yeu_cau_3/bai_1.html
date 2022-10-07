@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3,4,5,6,-8];
+    let n = a.length;
+    let prefixSum = [];
+    let b=prefixSum;
+    for (let i = 0; i <n; i++) {
+        if(i==0){
+            prefixSum[i]=a[i];
+        }else {
+            prefixSum[i]=prefixSum[i-1]+a[i];
+        }
+    }
+    document.write("PrefixSums(a) = [" + b + "]");
+</script>
+</body>
+</html>

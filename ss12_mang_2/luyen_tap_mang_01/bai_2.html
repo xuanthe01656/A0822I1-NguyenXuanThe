@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intArray=[10,5,6,8,11,16,4,3,2,1];
+    let max=intArray[0];
+    let index=0
+    for (let i = 0; i < intArray.length; i++) {
+        if(intArray[i]>max){
+            max=intArray[i];
+            index=i;
+        }
+    }
+    console.log(" Giá trị lớn nhất là: " + max + " tại vị trí: " +index);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt("Nhập vào chiều dài");
+    let y = prompt("Nhập vào chiều cao");
+    let emty ='&nbsp';
+
+    for (let i = 1; i <= y; i++) {
+        for (j = 1; j <= x; j++) {
+            if (i == 1 || i == y || j == 1 || j == x) {
+                document.write(" *");
+            } else {
+                document.write(emty+emty+emty)
+            }
+        }
+        document.write("<br> ");
+    }
+</script>
+</body>
+</html>

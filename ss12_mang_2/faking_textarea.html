@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<input id="click12" type="text" value="" onkeydown="onKey()">
+<script>
+    // document.getElementById("click12").addEventListener("keydown", onKey);
+
+    function onKey() {
+        let anyChareter= document.getElementById("click12").value;
+        let check=[];
+        let newArray = ['T','Ô','I',' ','L','À',' ','M','Ộ','T',' ','Đ','Ứ','A',' ','N','G','Ố','C','!','!']
+        for (let i = 0; i < newArray.length; i++) {
+                document.getElementById("click12").value = newArray[i];
+        }
+    }
+
+</script>
+</body>
+</html>

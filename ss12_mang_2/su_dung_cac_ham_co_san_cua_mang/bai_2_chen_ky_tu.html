@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers=prompt("Nhập vào số");
+    // let str=numbers.toString();
+    let numberArray = [numbers[0]];
+    for (let i = 1; i < numbers.length; i++) {
+        if((numbers[i-1]%2===0)&&(numbers[i]%2===0)){
+            numberArray.push('-',numbers[i]);
+        }else{
+            numberArray.push(numbers[i])
+        }
+    }
+    console.log(numberArray.join(''));
+</script>
+</body>
+</html>

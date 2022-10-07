@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let h=prompt("Nhập vào chiều cao.");
+    for (let i = 1; i <= h; i++) {
+        for (let j = i; j <=h ; j++) {
+            document.write("&nbsp&nbsp")
+        }
+        for (let j = 1; j <=i ; j++) {
+            if(j==1||j==i||i==h){
+                document.write("&nbsp*&nbsp")
+            }else {
+                document.write("&nbsp&nbsp&nbsp&nbsp")
+            }
+        }
+
+        document.write("<br>")
+    }
+</script>
+</body>
+</html>

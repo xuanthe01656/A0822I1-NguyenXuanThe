@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let values=prompt("Nhập vào 1 chuỗi ký tự");
+    let stringsArray = [];
+    for (let i = 0; i < values.length; i++) {
+        if(values[i]===values[i].toUpperCase()){
+            stringsArray[i]=values[i].toLowerCase();
+        }else {
+            stringsArray[i]=values[i].toUpperCase();
+        }
+    }
+
+    document.write(stringsArray.join(''))
+
+</script>
+</body>
+</html>

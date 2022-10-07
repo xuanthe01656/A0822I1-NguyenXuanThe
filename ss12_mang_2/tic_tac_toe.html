@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            text-align: center;
+            height: 40px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame"></p>
+<script>
+    let arr = new Array(10);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(10);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = "";
+        }
+    }
+    let checkPlayer1 = true;
+    display();
+
+    function display() {
+        let data = '<table border="1">';
+        for (let i = 0; i < 10; i++) {
+            data += '<tr>';
+            for (let j = 0; j < 10; j++) {
+                data += '<td  onclick="play(' + i + ',' + j + ')" style="width: 30px;height:30px; text-align: center">' + arr[i][j] + '</td>';
+            }
+            data += '</tr>'
+        }
+        data += '</table>';
+        document.getElementById("carogame").innerHTML = data;
+    }
+
+    function play(i, j) {
+        if (checkPlayer1 && isNotData(i, j)) {
+            arr[i][j] = "X";
+            checkPlayer1 = false;
+        } else if (!checkPlayer1&&isNotData(i, j)) {
+            arr[i][j] = "O";
+            checkPlayer1 = true;
+        }
+
+        display();
+    }
+
+    function isNotData(i, j) {
+        if (arr[i][j] == "") {
+            return true;
+        } else {
+            alert("ô này đánh rồi bạn ơi!!");
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let wage=+prompt("Nhập vào tiền lương");
+        if(wage<7000000){
+            document.write("Thuế thu nhập phải trả là: "+(wage*0.05)+"<br>");
+            document.write("Lương thực lãnh là: "+ (wage-(wage*0.05))+"<br>");
+        }else {
+            if(wage<15000000){
+                document.write("Thuế thu nhập phải trả là: "+(wage*0.1)+"<br>");
+                document.write("Lương thực lãnh là: "+ (wage-(wage*0.1))+"<br>");
+            }else {
+                document.write("Thuế thu nhập phải trả là: "+(wage*0.2)+"<br>");
+                document.write("Lương thực lãnh là: "+ (wage-(wage*0.2))+"<br>");
+            }
+        }
+    </script>
+</body>
+</html>

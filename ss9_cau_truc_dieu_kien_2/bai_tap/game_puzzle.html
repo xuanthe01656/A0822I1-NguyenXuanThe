@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game</title>
+</head>
+<body style="text-align: center">
+<img onclick="myclick()" id="image" src="anh/funny-cat1_part1x1.jpg" height="160" width="800"/>
+<img onclick="myclick1()" id="image1" src="anh/monkey_part2x1.jpg " height="160" width="800"/>
+<img onclick="myclick2()" id="image2" src="anh/panda_swap_part3x1.jpg" height="160" width="800"/>
+<img onclick="myclick3()" id="image3" src="anh/funny-cat1_part4x1.jpg" height="160" width="800"/>
+<img onclick="myclick4()" id="image4" src="anh/monkey_part5x1.jpg" height="160" width="800"/>
+<script>
+    function myclick() {
+        let img1 = document.getElementById('image');
+        if (img1.src.match('anh/funny-cat1_part1x1.jpg')) {
+            img1.src = "anh/monkey_part1x1.jpg";
+        } else {
+            if (img1.src.match('anh/monkey_part1x1.jpg')) {
+                img1.src = ('anh/panda_swap_part1x1.jpg')
+            } else {
+                img1.src = "anh/funny-cat1_part1x1.jpg";
+            }
+        }
+    }
+
+    function myclick1() {
+        let img2 = document.getElementById('image1');
+        if (img2.src.match('anh/funny-cat1_part2x1.jpg')) {
+            img2.src = "anh/monkey_part2x1.jpg";
+        } else {
+            if (img2.src.match('anh/monkey_part2x1.jpg')) {
+                img2.src = ('anh/panda_swap_part2x1.jpg')
+            } else {
+                img2.src = "anh/funny-cat1_part2x1.jpg";
+            }
+        }
+    }
+
+    function myclick2() {
+        let img3 = document.getElementById('image2');
+        if (img3.src.match('anh/funny-cat1_part3x1.jpg')) {
+            img3.src = "anh/monkey_part3x1.jpg";
+        } else {
+            if (img3.src.match('anh/monkey_part3x1.jpg')) {
+                img3.src = ('anh/panda_swap_part3x1.jpg')
+            } else {
+                img3.src = "anh/funny-cat1_part3x1.jpg";
+            }
+        }
+    }
+
+    function myclick3() {
+        let img4 = document.getElementById('image3');
+        if (img4.src.match('anh/funny-cat1_part4x1.jpg')) {
+            img4.src = "anh/monkey_part4x1.jpg";
+        } else {
+            if (img4.src.match('anh/monkey_part4x1.jpg')) {
+                img4.src = ('anh/panda_swap_part4x1.jpg')
+            } else {
+                img4.src = "anh/funny-cat1_part4x1.jpg";
+            }
+        }
+    }
+
+    function myclick4() {
+        let img5 = document.getElementById('image4');
+        if (img5.src.match('anh/funny-cat1_part5x1.jpg')) {
+            img5.src = "anh/monkey_part5x1.jpg";
+        } else {
+            if (img5.src.match('anh/monkey_part5x1.jpg')) {
+                img5.src = ('anh/panda_swap_part5x1.jpg')
+            } else {
+                img5.src = "anh/funny-cat1_part5x1.jpg";
+            }
+        }
+    }
+</script>
+</body>
+</html>

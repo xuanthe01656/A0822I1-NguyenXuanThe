@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="checker()">Input</button>
+<script>
+    function checker() {
+        let any_character = prompt("Nhập vào một ký tự bất kỳ trong bảng chữ cái tiếng anh.");
+        //Cách 1: duyệt mảng.
+        let vowel = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+        let check = vowel.some(a => a == any_character)
+        if (check == true) {
+            alert(any_character + "  là nguyên âm")
+        } else {
+            alert(any_character + " là phụ âm")
+        }
+        //Cách 2: swich_case.
+        switch (any_character) {
+            case("o"):
+            case("u"):
+            case("i"):
+            case("a"):
+            case("e"):
+            case("O"):
+            case("U"):
+            case("I"):
+            case("A"):
+            case("E"):
+                alert(any_character + " là nguyên âm");
+                break;
+            case(any_character):
+                alert(any_character+" là phụ âm")
+        }
+    }
+
+
+</script>
+</body>
+</html>

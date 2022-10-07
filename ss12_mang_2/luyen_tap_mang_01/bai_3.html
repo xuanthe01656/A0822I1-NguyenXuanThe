@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let intArray = [10, 5, 6, 8, 11, 16, 4, 3, 4, 1];
+    let max = intArray[0];
+    let index = 0
+    let sum=0;
+    let avg;
+    for (let i = 0; i < intArray.length; i++) {
+        if (intArray[i] > max) {
+            max = intArray[i];
+            index = i;
+        }
+        sum+= intArray[i];
+    }
+    avg=tong/intArray.length
+    console.log(" Giá trị lớn nhất là: " + max + " tại vị trí: " + index);
+    console.log("Giá trị trung bình của các phần tử trong mảng: Avg" +" của " + intArray+ " là "+ avg);
+
+
+</script>
+</body>
+</html>
