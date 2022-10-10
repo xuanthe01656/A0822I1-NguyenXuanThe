@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=+prompt("Nhập vào số lượng ký tự trong mảng.");
+    let arr= new Array(num);
+    for (let i = 0; i < num; i++) {
+        arr[i]=prompt("Nhập vào các ký tự");
+    }
+    for (let i = 0; i < arr.length ; i++) {
+        if(arr[i]=='-'){
+            arr.splice(i,1,"_");
+        }
+    }
+    alert(arr);
+</script>
+</body>
+</html>
