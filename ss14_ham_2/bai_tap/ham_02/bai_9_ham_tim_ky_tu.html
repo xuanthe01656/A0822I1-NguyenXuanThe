@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let anyCharacter = prompt("Nhập vào một ký tự bất kỳ");
+    let array1 = ['a', 'e', 'r', 't', '5', '9', 'i', 'a', 'e', '5', 't'];
+    //Dùng hàm some và 1 function.
+    let a = array1.some(e => e == anyCharacter);
+    if (a == true) {
+        function check(arr, char) {
+            let arr2 = [];
+            let index = 0
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == char) {
+                    arr2[index] = i;
+                    index++
+                }
+            }
+            alert(char + " xuất hiện " + arr2.length + " lần tại vị trí " + arr2)
+        }
+    } else {
+        alert(-1)
+    }
+    check(array1, anyCharacter);
+    //Dùng 2 Function.
+    // function check1(arr1, char1) {
+    //     for (let i = 0; i < arr1.length; i++) {
+    //         if(arr1[i]==char1){
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    // }
+    // if(check1(array1, anyCharacter)==true){
+    //     function check2(arr, char) {
+    //                 let arr2 = [];
+    //                 let index = 0
+    //                 for (let i = 0; i < arr.length; i++) {
+    //                     if (arr[i] == char) {
+    //                         arr2[index] = i;
+    //                         index++
+    //                     }
+    //                 }
+    //                 alert(char + " xuất hiện " + arr2.length + " lần tại vị trí " + arr2)
+    //             }
+    //         } else {
+    //             alert(-1)
+    //         }
+    // check2(array1, anyCharacter)
+</script>
+</body>
+</html>
