@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = +prompt("Nhập vào số lượng phần tử trong mảng a");
+    let num2 = +prompt("Nhập vào số lượng phần tử trong mảng b");
+    let A = new Array(num1);
+    let B = new Array(num2);
+    for (let i = 0; i < num1; i++) {
+        A[i] = +prompt("Nhập phần tử thứ " + i + " của mảng a");
+    }
+    for (let j = 0; j < num2; j++) {
+        B[j] = +prompt("Nhập phần tử thứ " + j + " của mảng b");
+    }
+    let k = 0;
+    let m = 0
+    let C = [];
+    if (B.length > A.length) {
+        while (k < B.length) {
+            let check = A.some(e => e == B[k])
+            if (check == false) {
+                C[m] = B[k];
+                m++;
+            }
+            k++;
+        }
+    } else {
+        if (A.length > B.length) {
+            while (k < A.length) {
+                let check = B.some(e => e == A[k])
+                if (check == false) {
+                    C[m] = A[k];
+                    m++;
+                }
+                k++;
+            }
+        }
+    }
+
+    alert("missingValue(A, B) = [" + C + "]");
+
+
+</script>
+</body>
+</html>

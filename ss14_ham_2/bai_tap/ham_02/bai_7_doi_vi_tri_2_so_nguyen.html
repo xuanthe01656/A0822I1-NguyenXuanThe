@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = +prompt("Enter the first number.");
+    let num2 = +prompt("Enter the second number.");
+
+    function convert(a, b) {
+        let c = a;
+        a = b;
+        b = c;
+        alert(a + ";" + b)
+    }
+
+    convert(num1, num2);
+</script>
+</body>
+</html>

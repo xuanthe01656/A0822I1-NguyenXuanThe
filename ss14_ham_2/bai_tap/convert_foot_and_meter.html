@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <select id="value1" >
+        <option>feet</option>
+        <option>meter</option>
+    </select>
+    <input type="text" id="input" value="" oninput="check1()">
+</div>
+<p>to</p>
+<div>
+    <select id="value2">
+        <option>meter</option>
+        <option>feet</option>
+    </select>
+    <input type="text" id="input2" value="">
+</div>
+<!--<button type="button" onclick="convert()">Result</button>-->
+<script>
+    function footToMeter(foot) {
+        return 0.305 * foot;
+    }
+
+    function meterToFoot(meter) {
+        return 3.279 * meter;
+    }
+
+    // function convert() {
+    //     if (value1 === "feet" && value2 === "meter") {
+    //         let input = +document.getElementById("input").value;
+    //         //let result = footToMeter(input);
+    //         document.getElementById("input2").value = footToMeter(input);
+    //     } else {
+    //         if (value1 === "meter" && value2 === "feet") {
+    //             let input = +document.getElementById("input").value;
+    //             //let result1 = meterToFoot(input);
+    //             document.getElementById("input2").value = meterToFoot(input);
+    //         }
+    //     }
+    // }
+    function check1() {
+        let value1 = document.getElementById("value1").value;
+        let value2 = document.getElementById("value2").value;
+        if (value1 === "feet" && value2 === "meter") {
+            let input = +document.getElementById("input").value;
+            let result = footToMeter(input);
+            document.getElementById("input2").value = result;
+        } else {
+            if (value1 === "meter" && value2 === "feet") {
+                let input1 = +document.getElementById("input").value;
+                let result1 = meterToFoot(input1);
+                document.getElementById("input2").value = result1;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

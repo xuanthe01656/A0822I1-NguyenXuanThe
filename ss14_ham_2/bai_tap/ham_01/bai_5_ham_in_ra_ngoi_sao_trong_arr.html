@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = prompt("Nhập vào tên một ngôi sao");
+    let arr = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+    let index=0
+
+    function check(array) {
+        for (let i = 0; i < array.length; i++) {
+            if(star==array[i]){
+                index=i;
+                document.write("Vị trí của ngôi sao "+array[i]+ " tại vị trí "+ index +"<br>");
+                document.write("Ngôi sao tại vị trí "+ index +" của mảng thứ 2 là " + arr2[index]);
+                return index;
+            }
+        }
+        alert("Không tìm thấy ngôi sao vừa nhập");
+    }
+    check(arr);
+
+</script>
+</body>
+</html>

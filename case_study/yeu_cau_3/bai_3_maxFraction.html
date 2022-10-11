@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=+prompt("Số phần tử cần nhập vào từng mảng.");
+    let numerators= new Array(num);
+    let denominators = new Array(num);
+    for (let i = 0; i < num; i++) {
+        numerators[i]= +prompt("Nhập phần tử thứ "+ i + " của mảng numerators.");
+    }
+    for (let j = 0; j < num; j++) {
+        denominators[j] = +prompt("Nhập phần tử thứ "+ j + " của mảng denominators.");
+    }
+    let max=0;
+    let index=0;
+    let value1, value2;
+        for (let k = 0; k < num; k++) {
+            let maxFraction = numerators[k]/denominators[k];
+            if(maxFraction>max){
+                max=maxFraction;
+                index=k;
+                value1= numerators[k]; value2=denominators[k];
+            }
+    }
+    alert(value1 +"/"+value2 + " là phân số lớn nhất có chỉ số là " + index);
+</script>
+</body>
+</html>

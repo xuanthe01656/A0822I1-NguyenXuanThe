@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số lượng phần tử trong mảng");
+    let arr = new Array(num);
+
+    for (let i = 0; i < num; i++) {
+        arr[i] = +prompt("Nhập vào phần tử thứ " + i);
+    }
+
+    function reverse(array) {
+        let arr1=[];
+        let first=array[0];
+        let last = array[array.length - 1];
+        for (let i = 1; i < array.length-1; i++) {
+            arr1[0]=last;
+            arr1[array.length-1]=first;
+            arr1[i]=array[array.length-1-i];
+        }
+        alert("Đảo ngược của mảng "+ array+" là: " +arr1);
+        //Dùng reverse:
+        array.reverse();
+        alert("Đảo ngược của mảng là: "+array)
+    }
+    reverse(arr);
+</script>
+</body>
+</html>

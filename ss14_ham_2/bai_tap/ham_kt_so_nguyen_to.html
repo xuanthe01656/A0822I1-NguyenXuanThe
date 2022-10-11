@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num= +prompt("Nhập số lượng số cần kiểm tra")
+    for (let i = 0; i <num; i++) {
+        let number = +prompt("Nhập vào một số nguyên bất kỳ nhỏ hơn 10000");
+        function isPrime(number) {
+            if (number <= 1) {
+                return false;
+            } else {
+                if (number === 2) {
+                    return true;
+                }
+                for (let i = 2; i < number; i++) {
+                    if (number % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        }
+
+        if (isPrime(number) === true) {
+            document.write(number + " là số nguyên tố <br>");
+        } else {
+            if (isPrime(number) === false) {
+                document.write(number + " không phải là số nguyên tố <br>");
+            }
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
