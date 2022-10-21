@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="200" style="border:1px solid #d3d3d3;"></p></canvas>
+<p id="display"></p>
+<script>
+
+    let num1= +prompt("Nhập vào chiều dài HCN");
+    let num2= +prompt("Nhập vào chiều rộng HCN");
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    // let Rectangle = function (x, y){
+    //     this.x=x;
+    //     this.y=y;
+    //     this.getWeight=function () {
+    //         return x;
+    //     }
+    //     this.getHeight=function () {
+    //         return y;
+    //
+    //     }
+    //     this.getArea=function () {
+    //         return x*y;
+    //     }
+    //     this.getPerimeter=function () {
+    //         return (x+y)*2
+    //     }
+    // }
+    class Rectangle{
+        constructor(x, y) {
+            this.x=x;
+            this.y=y;
+        }
+        getWeight(){
+
+            return this.x;
+        }
+        getHeight(){
+            return this.y;
+        }
+        getArea(){
+            return this.x*this.y;
+        }
+        getPerimeter(){
+            return (this.x+this.y)*2
+        }
+    }
+    let rectangel= new Rectangle(num1, num2);
+    let weight = rectangel.getWeight();
+    let height= rectangel.getHeight();
+    let areaRectangel=rectangel.getArea();
+    let perimeterRectangel=rectangel.getPerimeter();
+    ctx.strokeStyle = "red";
+    ctx.strokeRect(20, 20, weight, height);
+    document.getElementById("display").innerHTML= "Diện tích hình chữ nhật là: " +areaRectangel +"<br> Chu vi hình chữ nhật là: "+ perimeterRectangel;
+
+
+</script>
+</body>
+</html>

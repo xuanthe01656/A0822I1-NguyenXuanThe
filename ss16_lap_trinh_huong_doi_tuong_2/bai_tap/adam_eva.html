@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+
+        getGender() {
+            if (this.gender == 'male') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight){
+            this.weight=weight
+        }
+        say(text) {
+            document.write(this.getName() + ": Nhìn này " + text);
+        }
+
+        checkerApple(apple) {
+            if (apple.getWeight() > 0) {
+                return true;
+            } else {
+                return false
+            }
+        }
+
+        eatApple(apple) {
+            if (apple.getWeight() > 0 && apple.isEmpty() === false&&this.getGender()||this.checkerApple(apple)) {
+                let index = 1
+                let num = apple.getWeight();
+                document.write(this.getName() + " is " + this.gender + "<br>"+"KL " + this.getName() + " là " + (this.weight) + "<br>"+"KL quả táo là " + (num) + "<br><br>")
+                this.say("táo ngon quá ăn một miếng nào !! <br>");
+                document.write("KL " + this.getName() + " " + (this.weight += 1) + "<br>"+"KL quả táo " + (num -= 1) + "<br><br>");
+                for (let i = num; i > 0; i--) {
+                    document.write("KL " + this.getName() + " " + (this.weight += index) + "<br>"+"KL quả táo " + (num -= index) + "<br><br>");
+                    if (num == 0) {
+                        this.say("ăn hết táo rồi.<br><br>");
+                    }
+                }
+
+                index++
+            } else {
+                if (apple.isEmpty()) {
+                    this.say("có táo đâu mà ăn.");
+                }
+            }
+
+        }
+    }
+
+    class Apple {
+        constructor() {
+            return this.weight= 10;
+        }
+        getWeight() {
+            return this.weight=10;
+        }
+        isEmpty() {
+            if (this.getWeight() === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+
+    let adam = new Human("<b>Adam</b>", "male", 70);
+    let eva = new Human('<b>Eva</b>', 'female',55)
+    let apple1 = new Apple();
+    let apple2= new Apple()
+
+    adam.eatApple(apple1);
+    eva.eatApple(apple2)
+    adam.setName('<b>Oh</b>');
+    adam.setWeight(60)
+    adam.eatApple(apple1)
+
+</script>
+</body>
+</html>
