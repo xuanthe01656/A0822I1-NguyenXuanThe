@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    let values=prompt("Nhập vào 1 chuỗi ký tự");
+    let b=[];
+    let c=[];
+    let index=0;
+    let index1=0;
+    let stringsArray = [];
+    for (let i = 0; i < values.length; i++) {
+        if(values[i]===values[i].toUpperCase()){
+            stringsArray[i]=values[i].toLowerCase();
+        }else {
+            stringsArray[i]=values[i];
+        }
+    }
+    let f=stringsArray.join('').split(' ');
+    console.log(f)
+    for (let i = 0; i < f.length; i++) {
+        if(f[i]!==''){
+            b[index]=f[i];
+            index++
+        }
+    }
+
+    for (let i = 0; i < b.length; i++) {
+        const capitalize = (s) => {
+            if (typeof s !== 'string') return ''
+            return s.charAt(0).toUpperCase() + s.slice(1)
+        }
+        c[index1]=capitalize(b[i])
+        index1++
+    }
+    document.getElementById("display").innerHTML="Chuỗi trước khi chuẩn hóa là: "+values + '<br>'+ "Chuỗi sau khi chuẩn hóa là: "+ c.join(' ');
+
+
+
+</script>
+</body>
+</html>

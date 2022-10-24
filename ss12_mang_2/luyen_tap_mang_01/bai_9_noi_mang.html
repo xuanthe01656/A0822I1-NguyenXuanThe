@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Số lượng phần tử cần nhập.")
+    let a = new Array(num);
+    let b = new Array(num);
+    for (let i = 0; i < num; i++) {
+        a[i] = +prompt("Nhập vào phần tử thứ "+ i + " của mảng a.");
+
+    }
+    for (let i = 0; i < num; i++) {
+        b[i] = +prompt("Nhập vào phần tử thứ "+ i + " của mảng b.");
+    }
+
+    let c = a.concat(b);
+    alert("Các phần tử mảng c sau khi nối: " + c)
+</script>
+</body>
+</html>

@@ -6,10 +6,14 @@
 </head>
 <body>
 <script>
-    let intArray1 = [-1, 6, -8, -13, 5, 9, 13, -5,8,-19];
+    let num= +prompt("Số phần tử cần nhập.")
+    let intArray1 = new Array(num);
     let index = 0;
     let negatives = []
     let position= []
+    for (let i = 0; i < num; i++) {
+        intArray1[i]= +prompt("Nhập vào các phần tử.")
+    }
     for (let i = 0; i < intArray1.length; i++) {
         if (intArray1[i] < 0) {
             negatives.push(intArray1[i])
@@ -18,7 +22,7 @@
         }
 
     }
-    console.log( "Tổng số nguyên âm trong mảng là: "+negatives.length +" gồm "+negatives + " tại vị trí "+position);
+    alert( "Tổng số nguyên âm trong mảng là "+negatives.length+" phần tử gồm "+negatives + " tại vị trí "+position);
 </script>
 </body>
 </html>

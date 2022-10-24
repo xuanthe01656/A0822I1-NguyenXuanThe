@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhập vào một từ bất kỳ có nghĩa.");
+
+    function isPalindrome(s) {
+        let index = 0;
+        let index1 = s.length - 1
+        if (s[index] == s[index1]) {
+            return true
+        }
+        if (s[index++] == s[index1--]) {
+            return true;
+        }
+        return false;
+    }
+
+    alert(isPalindrome(str));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=+prompt("Nhập vào số lượng phần tử cần nhập");
+    let intArray=new Array(num);
+    let then10=[];
+    for (let i = 0; i < num; i++) {
+        intArray[i]=+prompt("Nhập các phần tử số nguyên");
+    }
+    for (let i = 0; i < intArray.length; i++) {
+            if(intArray[i]>=10){
+                then10.push(intArray[i]);
+            }
+    }
+    alert("Số phần tử lớn hơn hoặc bằng 10 gồm: " + then10.length + " phần tử là: " + then10);
+</script>
+</body>
+</html>

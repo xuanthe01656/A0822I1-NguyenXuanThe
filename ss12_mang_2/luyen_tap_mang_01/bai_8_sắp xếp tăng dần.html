@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num= +prompt("Số phần tử cần nhập.")
+    let numArray=new Array(num);
+    for (let i = 0; i < num; i++) {
+        numArray[i]= +prompt("Nhập vào các phần tử.")
+    }
+    //sắp xếp tăng dần.
+    let newArray=[numArray.sort(function(a, b){return a - b})];
+    alert( newArray);
+   //  //sắp xếp giảm dần
+   //  let newArray1=[numArray.sort(function(a, b){return b - a})];
+   //  alert( newArray1);
+   // //sắp xếp theo alpha B
+   //  let newArray2=numArray.sort();
+   //  alert(newArray2);
+</script>
+</body>
+</html>

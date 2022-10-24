@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table tr:nth-child(odd) {
+            border-collapse: collapse;
+            background-color: #eee;
+        }
+
+        td {
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<h2>Add new product</h2>
+<input id="input" placeholder="New Product" value=""><br><br>
+<button type="button" id="add" onclick="add1()">Add</button>
+<button type="button" id="upDate" style="display: none" onclick="ed1()">Edit</button>
+<p id="output"></p><br>
+
+
+<input type="text" id="sanPham" placeholder="Nhập tên sản phẩm">
+<input type="button" id="btn-add" value="Thêm mới" onclick="themMoi()"><br>
+<!--<input type="button" id="btn-update" style="display: none" value="Cập nhât" onclick="update()"><br>-->
+<span>Số lượng sản phẩm:  </span><span id="soLuong"></span>
+<div id="hienThi"></div>
+
+<script>
+    let arr = [];
+    let index1 = 0;
+
+    function display() {
+        let table = '<table border="1" style="border-collapse: collapse" >';
+        table += '<tr>';
+        table += '<th>STT</th></th><th>Product Name</th><th colspan="2" style="text-align: right">' + arr.length + ' products' + '</th>'
+        table += '</tr>';
+        for (let i = 0; i < arr.length; i++) {
+            table += '<tr>'
+            for (let j = 0; j < 1; j++) {
+                table += '<td>' + (i + 1) + '</td><td>' + arr[i] + '</td><td><button onclick="edit(' + i + ')" >Edit</button></td><td><button onclick="delete1(' + i + ')" >Delete</button></td>'
+            }
+            table += '</tr>'
+        }
+        table += '</table>';
+        document.getElementById("output").innerHTML = table;
+    }
+
+    function add1() {
+        let input = document.getElementById("input").value;
+        document.getElementById("add").style.display = 'block';
+        document.getElementById("upDate").style.display = 'none';
+        if (input !== "") {
+            arr.push(input);
+            display();
+            document.getElementById("input").value = "";
+        } else {
+            alert("Hãy nhập vào một sản phẩm.")
+        }
+    }
+
+    function edit(i) {
+        document.getElementById("add").style.display = 'none';
+        document.getElementById("upDate").style.display = 'block';
+        document.getElementById("input").value = arr[i];
+        index1 = i
+
+    }
+
+    function ed1() {
+        let replace = document.getElementById("input").value;
+        document.getElementById("add").style.display = 'block';
+        document.getElementById("upDate").style.display = 'none';
+        if (replace !== "") {
+            arr.splice(index1, 1, replace);
+            document.getElementById("input").value = '';
+            display()
+        } else {
+            alert("Hãy nhập vào tên sản phẩm mới")
+        }
+
+    }
+
+
+    function delete1(i) {
+        arr.splice(i, 1);
+        display();
+    }
+
+    let danhSachSP = ["Nokia", "Iphone", "Sam sung"]
+    hienThi(danhSachSP);
+
+    // let indexUpdate=-1;
+    function themMoi() {
+        let sanPhamMoi = document.getElementById("sanPham").value;
+        if (sanPhamMoi != "") {
+            danhSachSP.push(sanPhamMoi);
+        } else {
+            alert("Yêu cầu nhập sản phẩm");
+        }
+        hienThi(danhSachSP);
+        document.getElementById("sanPham").value = "";
+    }
+
+    function hienThi(danhSach) {
+
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xoá</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += '  <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i] + '</td>\n' +
+                '        <td><input type="button" onclick="suaSanPham(' + i + ')" value="Sửa"></td>\n' +
+                '        <td><input type="button" onclick="xoaSanPham(' + i + ')" value="Xoá"></td>\n' +
+                '    </tr>'
+        }
+
+        tableString += '</table>'
+        document.getElementById("hienThi").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = danhSach.length;
+    }
+
+    function xoaSanPham(index) {
+        let xacNhanXoa = confirm("Bạn có muốn xoá sản phẩm " + danhSachSP[index] + "???")
+        if (xacNhanXoa) {
+            danhSachSP.splice(index, 1);
+        }
+        hienThi(danhSachSP);
+    }
+
+    function suaSanPham(index) {
+        let editSanPham = prompt("Hãy nhập tên sản phẩm mới", danhSachSP[index]);
+        danhSachSP[index] = editSanPham;
+        hienThi(danhSachSP);
+    }
+
+    // function suaSanPham2(index) {
+    //     indexUpdate=index;
+    //     document.getElementById("sanPham").value=danhSachSP[index];
+    //     document.getElementById("btn-add").style.display='none';
+    //     document.getElementById("btn-update").style.display='block';
+    //
+    // }
+    // function update() {
+    //     let editSanPham =document.getElementById("sanPham").value
+    //     danhSachSP[indexUpdate] = editSanPham;
+    //     document.getElementById("btn-add").style.display='block';
+    //     document.getElementById("btn-update").style.display='none';
+    //     hienThi(danhSachSP);
+    // }
+</script>
+</body>
+</html>

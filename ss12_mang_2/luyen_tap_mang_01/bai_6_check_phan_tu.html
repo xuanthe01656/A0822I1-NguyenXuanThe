@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num= +prompt("Số phần tử cần nhập.")
+    let intArray3 = new Array(num);
+    for (let i = 0; i < num; i++) {
+        intArray3[i]= +prompt("Nhập vào các phần tử.")
+    }
+    let integer1 = +prompt("Nhập vào 1 số nguyên.");
+    let check = intArray3.some(e => e == integer1);
+    if (check == true) {
+        alert(integer1 + "  is in the array");
+    } else {
+        alert(integer1 + "  is not in the array");
+    }
+    if(integer1==" "||intArray3==" "||num==" "){
+        alert("Please enter an integer");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Battery {
+
+        setEnergy (energy) {
+            this.energy = energy;
+        };
+
+        getEnergy () {
+            return this.energy;
+        };
+
+        decreaseEnergy () {
+            if ( this.energy > 0) {
+                return this.energy--;
+            }
+        }
+    }
+    class FlashLamp {
+
+        setBattery (battery) {
+           this.battery = battery;
+        };
+
+        getBatteryInfo()  {
+            return this.battery.getEnergy()
+        };
+
+        light () {
+            if(this.status){
+                document.write("<b style='color: red'>Lighting</b><br>");
+            } else {
+                document.write("<b>Not lighting</b><br><br>");
+            }
+        };
+
+       turnOn () {
+
+           this.status = true;
+        };
+
+        turnOff () {
+            this.status = false;
+        }
+
+    }
+    let battery = new Battery();
+    battery.setEnergy(10);
+
+    let flashLamp = new FlashLamp();
+    flashLamp.setBattery(battery);
+
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/><br/>");
+    for (let i = 0; i < 10; i++) {
+        if(flashLamp.getBatteryInfo()>0){
+            document.write("Turn on<br/>");
+            flashLamp.turnOn();
+            flashLamp.light();
+            battery.decreaseEnergy();
+            document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/><br/>");
+
+            document.write("Turn off<br/>")
+            flashLamp.turnOff();
+            flashLamp.light();
+            if(flashLamp.getBatteryInfo()==0){
+                document.write("Hết pin. Cắm sạc");
+            }
+        } else {
+            if(flashLamp.getBatteryInfo()==0){
+                document.write("Hết pin. Cắm sạc");
+                break;
+            }
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

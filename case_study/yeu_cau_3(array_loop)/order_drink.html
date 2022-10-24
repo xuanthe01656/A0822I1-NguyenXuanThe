@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Menu</h1>
+<p id="input"></p>
+<input type="button" onclick="order1()" value="Gọi thức uống">
+
+<script>
+    let menu = [{id: 1, name: 'Cafe', rate: 15000}, {id: 2, name: 'Cam vắt', rate: 20000}, {
+        id: 3, name: 'Nước ép cà rốt', rate: 15000
+    }, {id: 4, name: 'Nước ép cà chua', rate: 22000}, {id: 5, name: 'Nước lọc', rate: 7000}, {
+        id: 6,
+        name: 'Nước dừa',
+        rate: 25000
+    }, {id: 7, name: 'Thoát gọi thức uống'}];
+    let rate = []
+    let index = 0
+    let index1 = 0
+
+    function display() {
+        let table = '<table border="1" style="border-collapse: collapse">';
+        table += '<tr>';
+        table += '<th>STT</th>'
+        table += '<th>Tên thức uống</th>'
+        table += '</tr>';
+        for (let i = 0; i < menu.length; i++) {
+            table += '<tr>' + '<td>' + menu[i].id + '</td>' + '<td>' + menu[i].name + '</td>'
+                + '</tr>'
+        }
+        table += '</table>';
+        document.getElementById("input").innerHTML = table;
+    }
+
+    function order1() {
+        do {
+            let num = +prompt("Nhập vào số thứ tự thức uống thứ "+(index1+1)+ " của bạn.");
+            if (num < 1 || num > 7) {
+                alert("Số thứ tự bạn vừa nhập không có trong menu")
+            } else {
+                if (num <= 6) {
+                    for (let i = 0; i < menu.length; i++) {
+                        if (menu[i].id === num || menu[i].name === num) {
+                            let num2 = +prompt("Món bạn gọi là " + menu[i].name + " có giá là: " + menu[i].rate + " VND\nHãy nhập số lượng bạn muốn gọi.");
+                            rate[index1] = num2 * menu[i].rate;
+                            index1++
+                        }
+                    }
+                } else {if (!Number.isInteger(num)) {
+                        alert("Hãy nhập vào một số nguyên dương")
+                    } else {
+                        break;
+                    }
+                }
+            }
+            index++;
+    }
+    while (index < 10) ;
+    let tong = 0
+    for (let i = 0; i < rate.length; i++) {
+        tong += rate[i];
+    }
+
+    alert("Tổng tiền thức uống bạn gọi là " + tong + " VND")
+    }
+
+    display();
+
+</script>
+</body>
+</html>

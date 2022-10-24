@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập vào dãy số");
+    let b = [{id: '0', name: "không"}, {id: '1', name: "một"}, {id: '2', name: "hai"}, {id: '3', name: "ba"}, {
+        id: '4',
+        name: "bốn"
+    }, {id: '5', name: "năm"}, {id: '6', name: "sáu"}, {id: '7', name: "bảy"}, {id: '8', name: "tám"}, {id: '9', name: "chín"}];
+    let c = [];
+    let index = 0
+    for (let i = 0; i < a.length ; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (b[j].id === a[i]) {
+                c[index]=b[j].name;
+                index++;
+            }
+        }
+    }
+    console.log(c.join(' '));
+
+</script>
+</body>
+</html>
